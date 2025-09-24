@@ -1,15 +1,18 @@
+"use client";
 import Link from "next/link";
-import Strings from "@/constants/strings";
 
 const TalkButton = () => {
+  const redirectToWhatsApp = () => {
+    window.open("https://wa.me/923405245826", "_blank");
+  };
+
   return (
-    <Link
+    <button
+      onClick={redirectToWhatsApp}
       className="app__filled_btn min-w-[10rem]"
-      href={Strings.telegramLink}
-      target="_blank"
     >
       Let&apos;s Talk
-    </Link>
+    </button>
   );
 };
 
