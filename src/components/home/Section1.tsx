@@ -115,7 +115,7 @@ const AnimatedShape = () => {
         <div className="absolute inset-16 lg:inset-20 z-10">
           <div className="w-full h-full rounded-full overflow-hidden border-4 border-[var(--primaryColor)] shadow-2xl bg-white/10 backdrop-blur-sm">
             <img 
-              src="/image (3).png" 
+              src="/image.jpg" 
               alt="Wasif Ali" 
               className="w-full h-full object-contain rounded-full hover:scale-110 transition-transform duration-300 ease-in-out"
             />
