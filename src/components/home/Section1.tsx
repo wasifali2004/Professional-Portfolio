@@ -15,7 +15,8 @@ const AnimatedShape = () => {
     <>
       <style jsx global>{`
         @keyframes morphShape {
-          0%, 100% {
+          0%,
+          100% {
             border-radius: 50% 50% 50% 50%;
             transform: scale(1) rotate(0deg);
           }
@@ -32,9 +33,10 @@ const AnimatedShape = () => {
             transform: scale(1.05) rotate(270deg);
           }
         }
-        
+
         @keyframes morphShape2 {
-          0%, 100% {
+          0%,
+          100% {
             border-radius: 40% 60% 70% 30%;
             transform: scale(1);
           }
@@ -47,9 +49,10 @@ const AnimatedShape = () => {
             transform: scale(0.85);
           }
         }
-        
+
         @keyframes morphShape3 {
-          0%, 100% {
+          0%,
+          100% {
             border-radius: 50%;
             transform: scale(1);
           }
@@ -58,7 +61,7 @@ const AnimatedShape = () => {
             transform: scale(1.2);
           }
         }
-        
+
         @keyframes shapeRotate {
           from {
             transform: rotate(0deg);
@@ -67,9 +70,10 @@ const AnimatedShape = () => {
             transform: rotate(360deg);
           }
         }
-        
+
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px) translateX(0px);
             opacity: 0.6;
           }
@@ -79,34 +83,37 @@ const AnimatedShape = () => {
           }
         }
       `}</style>
-      
+
       <div className="relative w-80 h-80 lg:w-96 lg:h-96">
         {/* Main animated circle */}
         <div className="absolute inset-0 animate-pulse">
-          <div 
+          <div
             className="w-full h-full rounded-full bg-gradient-to-br from-[var(--primaryColor)] via-purple-500 to-blue-500 opacity-20"
             style={{
-              animation: 'morphShape 8s ease-in-out infinite, shapeRotate 20s linear infinite'
+              animation:
+                "morphShape 8s ease-in-out infinite, shapeRotate 20s linear infinite",
             }}
           />
         </div>
-        
+
         {/* Secondary shape */}
         <div className="absolute inset-4 animate-pulse delay-1000">
-          <div 
+          <div
             className="w-full h-full rounded-full bg-gradient-to-tr from-cyan-400 via-[var(--primaryColor)] to-pink-500 opacity-30"
             style={{
-              animation: 'morphShape2 6s ease-in-out infinite reverse, shapeRotate 15s linear infinite reverse'
+              animation:
+                "morphShape2 6s ease-in-out infinite reverse, shapeRotate 15s linear infinite reverse",
             }}
           />
         </div>
-        
+
         {/* Inner core */}
         <div className="absolute inset-8">
-          <div 
+          <div
             className="w-full h-full rounded-full bg-gradient-to-bl from-[var(--primaryColor)] to-purple-600 opacity-40"
             style={{
-              animation: 'morphShape3 4s ease-in-out infinite, shapeRotate 10s linear infinite'
+              animation:
+                "morphShape3 4s ease-in-out infinite, shapeRotate 10s linear infinite",
             }}
           />
         </div>
@@ -114,14 +121,14 @@ const AnimatedShape = () => {
         {/* Center Image Container */}
         <div className="absolute inset-16 lg:inset-20 z-10">
           <div className="w-full h-full rounded-full overflow-hidden border-4 border-[var(--primaryColor)] shadow-2xl bg-white/10 backdrop-blur-sm">
-            <img 
-              src="/image.jpg" 
-              alt="Wasif Ali" 
+            <img
+              src="/DP.jpg"
+              alt="Wasif Ali"
               className="w-full h-full object-contain rounded-full hover:scale-110 transition-transform duration-300 ease-in-out"
             />
           </div>
         </div>
-        
+
         {/* Floating particles */}
         <div className="absolute inset-0">
           {[...Array(8)].map((_, i) => (
@@ -129,9 +136,9 @@ const AnimatedShape = () => {
               key={i}
               className="absolute w-2 h-2 bg-[var(--primaryColor)] rounded-full opacity-60"
               style={{
-                top: `${20 + (i * 10)}%`,
-                left: `${15 + (i * 8)}%`,
-                animation: `float 3s ease-in-out infinite ${i * 0.5}s`
+                top: `${20 + i * 10}%`,
+                left: `${15 + i * 8}%`,
+                animation: `float 3s ease-in-out infinite ${i * 0.5}s`,
               }}
             />
           ))}
@@ -164,13 +171,13 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
                 </h1>
               </div>
               <p className="text-sm/normal md:text-base/normal dark:text-[var(--textColorLight)] text-[var(--textColorLight)] text-center lg:text-left">
-               Full-Stack Engineer | Passionate About Code, Community & Impact
+                Full-Stack Engineer | Passionate About Code, Community & Impact
               </p>
 
               <div className="gap-4 mt-6 lg:mt-8 flex flex-col md:flex-row">
                 <TalkButton />
               </div>
-              
+
               <div className="mt-12 lg:mt-16 w-full flex flex-col items-center lg:items-start">
                 <p className="text-base/6 font-medium">Follow me here</p>
 
