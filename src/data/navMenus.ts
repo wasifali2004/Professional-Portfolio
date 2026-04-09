@@ -11,11 +11,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const navMenus: INavItem[] = [
-  // {
-  //   name: "Home",
-  //   link: "/#hero",
-  //   icon: faHome,
-  // },
+  {
+    name: "Home",
+    link: "/#hero",
+    icon: faHome,
+  },
   {
     name: "About",
     link: "/#about",
@@ -46,9 +46,9 @@ export const navMenus: INavItem[] = [
     link: "/#contact",
     icon: faEnvelope,
   },
-  {
-    name: "Payment",
-    link: "/payment",
-    icon: faCreditCard,
-  },
+  // {
+  //   name: "Payment",
+  //   link: "/payment",
+  //   icon: faCreditCard,
+  // },
 ];
